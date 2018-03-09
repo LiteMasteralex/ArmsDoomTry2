@@ -9,6 +9,10 @@ public class Bullets : MonoBehaviour {
 		if (col.gameObject.tag == "Alive") {
 			Destroy(col.gameObject);
 			Destroy(this.gameObject);
+		} else if (col.gameObject.tag == "Player") {
+			Debug.Log("End Game");
+		} else {
+			Destroy(this.gameObject);
 		}
 	}
 }
